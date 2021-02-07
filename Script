@@ -1,0 +1,229 @@
+-- Game Editor
+
+-- Development by SXFREELOLOLO
+
+local ImGuiRBLX = Instance.new("ScreenGui")
+local ShowFov = Instance.new("Frame")
+local MainFrame = Instance.new("Frame")
+local title2 = Instance.new("TextLabel")
+local Smallchcheckboxblue = Instance.new("TextButton")
+local showfovcheckboxblue = Instance.new("TextButton")
+local showfovcheckboxwhite = Instance.new("TextButton")
+local title3 = Instance.new("TextLabel")
+local Crosshair = Instance.new("TextLabel")
+local Smallchcheckboxwhite = Instance.new("TextButton")
+local title3_2 = Instance.new("TextLabel")
+local ImGuiMain = Instance.new("ImageButton")
+local Title = Instance.new("TextLabel")
+local minimize = Instance.new("TextButton")
+local sFrame = Instance.new("ImageButton")
+local Title_2 = Instance.new("TextLabel")
+local reopen = Instance.new("TextButton")
+
+--Properties:
+
+ImGuiRBLX.Name = "ImGui RBLX"
+ImGuiRBLX.Parent = game.CoreGui
+
+ShowFov.Name = "ShowFov"
+ShowFov.Parent = ImGuiRBLX
+ShowFov.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ShowFov.Position = UDim2.new(0.437361538, 0, 0.312039316, 0)
+ShowFov.Size = UDim2.new(0, 346, 0, 305)
+ShowFov.Visible = false
+ShowFov.Style = Enum.FrameStyle.DropShadow
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ImGuiRBLX
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.Position = UDim2.new(0.0425663069, 0, 0.166963801, 0)
+MainFrame.Size = UDim2.new(0, 458, 0, 332)
+MainFrame.Style = Enum.FrameStyle.RobloxRound
+MainFrame.Draggable = true
+MainFrame.Active = true
+
+title2.Name = "title2"
+title2.Parent = MainFrame
+title2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title2.BackgroundTransparency = 9.000
+title2.Position = UDim2.new(0.611996472, 0, 0.19018665, 0)
+title2.Size = UDim2.new(0, 51, 0, 15)
+title2.Font = Enum.Font.Roboto
+title2.Text = "Small Croshair"
+title2.TextColor3 = Color3.fromRGB(255, 255, 255)
+title2.TextSize = 12.000
+
+Smallchcheckboxblue.Name = "Smallchcheckboxblue"
+Smallchcheckboxblue.Parent = MainFrame
+Smallchcheckboxblue.BackgroundColor3 = Color3.fromRGB(46, 93, 140)
+Smallchcheckboxblue.BorderColor3 = Color3.fromRGB(46, 93, 140)
+Smallchcheckboxblue.Position = UDim2.new(0.776507258, 0, 0.180289403, 0)
+Smallchcheckboxblue.Size = UDim2.new(0, 20, 0, 20)
+Smallchcheckboxblue.Font = Enum.Font.SourceSans
+Smallchcheckboxblue.Text = ""
+Smallchcheckboxblue.TextColor3 = Color3.fromRGB(0, 0, 0)
+Smallchcheckboxblue.TextSize = 14.000
+Smallchcheckboxblue.MouseButton1Down:connect(function()
+	Crosshair.Visible = true
+	Smallchcheckboxblue.Visible = false
+	Smallchcheckboxwhite.Visible = true
+end)
+
+showfovcheckboxblue.Name = "showfovcheckboxblue"
+showfovcheckboxblue.Parent = MainFrame
+showfovcheckboxblue.BackgroundColor3 = Color3.fromRGB(46, 93, 140)
+showfovcheckboxblue.BorderColor3 = Color3.fromRGB(46, 93, 140)
+showfovcheckboxblue.Position = UDim2.new(0.776507258, 0, 0.306795418, 0)
+showfovcheckboxblue.Size = UDim2.new(0, 20, 0, 20)
+showfovcheckboxblue.Font = Enum.Font.SourceSans
+showfovcheckboxblue.Text = ""
+showfovcheckboxblue.TextColor3 = Color3.fromRGB(0, 0, 0)
+showfovcheckboxblue.TextSize = 14.000
+showfovcheckboxblue.MouseButton1Down:connect(function()
+	showfovcheckboxwhite.Visible = true
+	showfovcheckboxblue.Visible = false
+	ShowFov.Visible = true
+end)
+
+showfovcheckboxwhite.Name = "showfovcheckboxwhite"
+showfovcheckboxwhite.Parent = MainFrame
+showfovcheckboxwhite.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+showfovcheckboxwhite.BorderColor3 = Color3.fromRGB(46, 93, 140)
+showfovcheckboxwhite.Position = UDim2.new(0.776507258, 0, 0.306795418, 0)
+showfovcheckboxwhite.Size = UDim2.new(0, 20, 0, 20)
+showfovcheckboxwhite.Visible = false
+showfovcheckboxwhite.Font = Enum.Font.SourceSans
+showfovcheckboxwhite.Text = ""
+showfovcheckboxwhite.TextColor3 = Color3.fromRGB(0, 0, 0)
+showfovcheckboxwhite.TextSize = 14.000
+Smallchcheckboxwhite.MouseButton1Down:connect(function()
+	showfovcheckboxwhite.Visible = false
+	showfovcheckboxblue.Visible = true
+	ShowFov.Visible = false
+end)
+
+title3.Name = "title3"
+title3.Parent = MainFrame
+title3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title3.BackgroundTransparency = 9.000
+title3.Position = UDim2.new(0.63164711, 0, 0.313680619, 0)
+title3.Size = UDim2.new(0, 51, 0, 15)
+title3.Font = Enum.Font.Roboto
+title3.Text = "Show FOV"
+title3.TextColor3 = Color3.fromRGB(255, 255, 255)
+title3.TextSize = 12.000
+
+Crosshair.Name = "Crosshair"
+Crosshair.Parent = MainFrame
+Crosshair.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Crosshair.BackgroundTransparency = 9.000
+Crosshair.Position = UDim2.new(1.31030416, 0, 0.473024786, 0)
+Crosshair.Size = UDim2.new(0, 420, 0, 293)
+Crosshair.Visible = false
+Crosshair.Font = Enum.Font.SourceSans
+Crosshair.Text = "+"
+Crosshair.TextColor3 = Color3.fromRGB(255, 0, 0)
+Crosshair.TextSize = 60.000
+
+Smallchcheckboxwhite.Name = "Smallchcheckboxwhite"
+Smallchcheckboxwhite.Parent = MainFrame
+Smallchcheckboxwhite.BackgroundColor3 = Color3.fromRGB(46, 93, 140)
+Smallchcheckboxwhite.BorderColor3 = Color3.fromRGB(46, 93, 140)
+Smallchcheckboxwhite.Position = UDim2.new(0.776507258, 0, 0.180289403, 0)
+Smallchcheckboxwhite.Size = UDim2.new(0, 20, 0, 20)
+Smallchcheckboxwhite.Visible = false
+Smallchcheckboxwhite.Font = Enum.Font.SourceSans
+Smallchcheckboxwhite.Text = ""
+Smallchcheckboxwhite.TextColor3 = Color3.fromRGB(0, 0, 0)
+Smallchcheckboxwhite.TextSize = 14.000
+Smallchcheckboxwhite.MouseButton1Down:connect(function()
+	Crosshair.Visible = false
+	Smallchcheckboxwhite.Visible = false
+	Smallchcheckboxblue.Visible = true
+end)
+
+title3_2.Name = "title3"
+title3_2.Parent = MainFrame
+title3_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title3_2.BackgroundTransparency = 9.000
+title3_2.Position = UDim2.new(0.197149307, 0, 0.952234805, 0)
+title3_2.Size = UDim2.new(0, 51, 0, 15)
+title3_2.Font = Enum.Font.Roboto
+title3_2.Text = "Credits to SXFREELOLOLO for development"
+title3_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+title3_2.TextSize = 12.000
+
+ImGuiMain.Name = "ImGui-Main"
+ImGuiMain.Parent = MainFrame
+ImGuiMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImGuiMain.BackgroundTransparency = 1.000
+ImGuiMain.Position = UDim2.new(-0.0171047691, 0, -0.0241515823, 0)
+ImGuiMain.Size = UDim2.new(0, 457, 0, 16)
+ImGuiMain.Image = "rbxassetid://2790382281"
+ImGuiMain.ImageColor3 = Color3.fromRGB(46, 93, 140)
+ImGuiMain.ScaleType = Enum.ScaleType.Slice
+ImGuiMain.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Title.Name = "Title"
+Title.Parent = ImGuiMain
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 9.000
+Title.Position = UDim2.new(0.274718165, 0, -0.0236971714, 0)
+Title.Size = UDim2.new(0, 200, 0, 15)
+Title.Font = Enum.Font.Roboto
+Title.Text = "Game Editor v0.2.0"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 12.000
+
+minimize.Name = "minimize"
+minimize.Parent = ImGuiMain
+minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+minimize.BackgroundTransparency = 9.000
+minimize.Position = UDim2.new(-0.000567216426, 0, 0.040254429, 0)
+minimize.Size = UDim2.new(0, 43, 0, 13)
+minimize.Font = Enum.Font.SourceSans
+minimize.Text = "▼"
+minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+minimize.TextSize = 14.000
+minimize.MouseButton1Down:connect(function()
+	MainFrame.Visible = false
+	sFrame.Visible = true
+end)
+
+sFrame.Name = "sFrame"
+sFrame.Parent = ImGuiRBLX
+sFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sFrame.BackgroundTransparency = 1.000
+sFrame.Position = UDim2.new(0.325276464, 0, 0.0127034392, 0)
+sFrame.Size = UDim2.new(0, 442, 0, 15)
+sFrame.Visible = false
+sFrame.Image = "rbxassetid://2790382281"
+sFrame.ImageColor3 = Color3.fromRGB(46, 93, 140)
+sFrame.ScaleType = Enum.ScaleType.Slice
+sFrame.SliceCenter = Rect.new(4, 4, 252, 252)
+
+Title_2.Name = "Title"
+Title_2.Parent = sFrame
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 9.000
+Title_2.Position = UDim2.new(0.274718165, 0, -0.0236971714, 0)
+Title_2.Size = UDim2.new(0, 200, 0, 15)
+Title_2.Font = Enum.Font.Roboto
+Title_2.Text = "Game Editor v0.2.0"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextSize = 12.000
+
+reopen.Name = "reopen"
+reopen.Parent = sFrame
+reopen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+reopen.BackgroundTransparency = 9.000
+reopen.Position = UDim2.new(-0.000567216426, 0, -0.0264122412, 0)
+reopen.Size = UDim2.new(0, 43, 0, 13)
+reopen.Font = Enum.Font.SourceSans
+reopen.Text = "►"
+reopen.TextColor3 = Color3.fromRGB(255, 255, 255)
+reopen.TextSize = 14.000
+reopen.MouseButton1Down:connect(function()
+	MainFrame.Visible = true
+	sFrame.Visible = false
+end)
